@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ragged-cafe"
+version = "0.1.0"
+description = ""
+authors = ["Jeff Baatz <jeff.baatz@proscia.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+polars = "^0.20.5"
+transformers = "^4.36.2"
+spacy = "^3.7.2"
+llama-index = "^0.9.39"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

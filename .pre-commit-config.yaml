@@ -1,0 +1,26 @@
+repos:
+
+- repo: local
+  hooks:
+  - id: naive-check-merge-conflict
+    name: naive check-merge-conflict
+    entry: '^(<<<<<<< |======= |>>>>>>> |=======$)'
+    language: pygrep
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: check-added-large-files
+
+- repo: https://github.com/ambv/black
+  rev: 23.1.0
+  hooks:
+  - id: black
+    language_version: python3
+    args: ['--line-length=120']
+
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  rev: 'v0.0.240'
+  hooks:
+    - id: ruff
+      args: ["--fix"]
